@@ -34,7 +34,7 @@ function App() {
     <div className="App">
       <Navigation total={count} />
       <Container>
-        <h1>U poníka</h1>
+        <h1 className='fw-bold'>U poníka</h1>
         <p>Celkem: {count}</p>
         <TableGroup tables={tables} setTables={setTables} />
       </Container>

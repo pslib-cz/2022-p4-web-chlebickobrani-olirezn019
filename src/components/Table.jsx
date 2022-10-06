@@ -14,7 +14,7 @@ const Table = ({ index, people, tables, setTables }) => {
     return(
         <Card style={{ width: '18rem' }}>
             <Card.Body>
-                <Card.Title>Stůl: {index+1}</Card.Title>
+                <Card.Title className="fw-bold">Stůl: {index+1}</Card.Title>
                 <Card.Text>Konzumace: {arraySum(people)}</Card.Text>
                 <Stack direction="horizontal" gap={3}>
                     {people.map((val, i) => <Button key={i} variant="secondary" value={i} onClick={onButtonClick} >{val}</Button>)}
