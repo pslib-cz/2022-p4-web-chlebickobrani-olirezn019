@@ -2,13 +2,17 @@ import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import Stack from "react-bootstrap/Stack";
 import { arraySum, copyMultidimensionalArray } from "../helpers/ArrayManipulation"
+import { useContext } from "react";
+import { Context, INCCOUNT, SETTABLES } from "../providers/Provider";
 
-const Table = ({ index, people, tables, setTables }) => {
+const Table = ({ index, people }) => {
+    let [store, dispatch] = useContext(Context);
 
     function onButtonClick(e) {
-        let array = copyMultidimensionalArray(tables);
+        let array = copyMultidimensionalArray(store.tables);
         array[index][e.target.value] += 1;
-        setTables(array);
+        dispatch({type: SETTABLES, payload: array});
+        dispatch({type: INCCOUNT});
     }
 
     return(

@@ -1,12 +1,12 @@
-import { CardGroup } from "react-bootstrap";
+import { CardGroup, Row, Col } from "react-bootstrap";
 import Table from "./Table";
 
-const TableGroup = ({ tables, setTables }) => {
+const TableGroup = ({ tables }) => {
 
     return (
-        <CardGroup>
-            {tables.map((val, i) => <Table key={i} index={i} people={val} tables={tables} setTables={setTables} />)}
-        </CardGroup>
+        <Row xs={1} md={2} lg={4}>
+            {tables.map((val, i) => <Col className="mb-3"><Table key={i} index={i} people={val} /></Col>)}
+        </Row>
     );
 }
 
