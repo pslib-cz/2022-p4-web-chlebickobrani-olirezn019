@@ -1,11 +1,10 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import Navigation from "./components/Navigation";
-import { Context, Provider } from "./providers/Provider";
+import { Provider } from "./providers/Provider";
 import { BrowserRouter, Route, Routes,  } from 'react-router-dom';
 import Chlebickobrani from "./components/Chlebickobrani";
 import Setup from "./components/Setup";
-import { useContext } from 'react';
 
 function App() {
 
